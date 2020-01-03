@@ -1,0 +1,98 @@
+.resume {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "photo"
+      "name"
+      "about"
+      "work"
+      "education"
+      "skills"
+      "community"
+      "references";
+    grid-gap: 1.5em;
+    font-family: sans-serif;
+    padding: 1.5em;
+}
+
+@media (min-width: 900px) {
+    .resume {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+          "name photo"
+          "about about"
+          "work work"
+          "education education"
+          "skills skills"
+          "community community"
+          "references references";
+    }
+}
+
+@media (min-width: 1200px) {
+    .resume {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas:
+            "name photo"
+            "work about"
+            "work education"
+            "community skills";
+        border: 1px solid #a0a0a0;
+        box-shadow: 5px 5px 10px #a0a0a0;
+        margin: 1.5em;
+    }
+}
+
+.resume section h1 {
+    font-size: 2em;
+}
+
+.resume section h2 {
+    font-size: 1.5em;
+}
+
+.resume section h3 {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: #a0a0a0;
+    text-transform: uppercase;
+    padding: 1em 0;
+    font-size: 1.2em;
+}
+
+.name {
+    grid-area: name;
+}
+
+.photo {
+    grid-area: photo;
+}
+
+.about {
+    grid-area: about;
+}
+
+.work {
+    grid-area: work;
+}
+
+.education {
+    grid-area: education;
+}
+
+.community {
+    grid-area: community;
+}
+
+.skills {
+    grid-area: skills;
+}
+
+<section class="name"></section>
+<section class="photo"></section>
+<section class="about"></section>
+<section class="work"></section>
+<section class="education"></section>
+<section class="community"></section>
+<section class="skills"></section>
